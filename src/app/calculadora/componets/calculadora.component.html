@@ -1,0 +1,49 @@
+<section class="container">
+    <section class="row">
+        <section id="calculadora2" class="text-center">
+            <p>Calculadora Cientifíca</p>
+            <input type="text" class="form-control text-right kz-input-text" id="display" name="display"
+                readonly [value]="display">
+            <table>
+                <tr>
+                    <td><button class="botao2" (click)="definirOperacao('√')">√</button></td>
+                    <td><button class="btn btn-danger" (click)="limpar()">C</button></td>
+                    <td><button class="botao2" (click)="delete()"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-eraser-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm.66 11.34L3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z" />
+                            </svg></button>
+                    </td>
+                    <td><button class="botao2" (click)="definirOperacao('/')">/</button></td>
+                    <td><button class="botao2" (click)="definirOperacao('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao2" (click)="elavadoQuadrado()">X²</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('7')">7</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('8')">8</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('9')">9</button></td>
+                    <td><button class="botao2" (click)="definirOperacao('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao2" (click)=cubo()>X³</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('4')">4</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('5')">5</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('6')">6</button></td>
+                    <td><button class="botao2" (click)="definirOperacao('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao2" (click)="inserirPi()">π</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('1')">1</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('2')">2</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('3')">3</button></td>
+                    <td rowspan="2"><button class="btn btn-warning" type="button" style="height: 106px" (click)="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button class="botao2 " style="width: 177px;"
+                            (click)="adicionaNumeros('0')">0</button></td>
+                    <td><button class="botao2" (click)="adicionaNumeros('.')">.</button></td>
+                </tr>
+            </table>
+        </section>
+    </section>
+</section>

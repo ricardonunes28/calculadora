@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar {
+    height: 90px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+
+}
+
+body, html{
+    background-color: rgb(203, 203, 252);
+}
+
+#imgCalc{
+    position: fixed;
+    left: 50%;
+    height:20vh;
+   
+}
