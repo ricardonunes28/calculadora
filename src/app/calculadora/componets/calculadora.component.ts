@@ -113,16 +113,33 @@ export class CalculadoraComponent implements OnInit {
       this.numero2 = this.numero2.toString().slice(0, -1);
     }
   }
-  //operação PI 
-  inserirPi(): void{
-    const PI = (Math.PI).toString();
-    if(this.operacao == 'null'){
-      this.numero1 = '';
-    } else {
-      this.numero2 = '';
-    }
+  // operação PI 
+  // inserirPi(): void{
+  //   const PI = (Math.PI).toString();
+  //   if(this.operacao == 'null'){
+  //     this.numero1 = '';
+  //   } else {
+  //     this.numero2 = '';
+  //   }
     
-    this.adicionaNumeros(PI)
+  //   this.adicionaNumeros(PI)
+  // }
+
+  //Solução completa para a conta com PI
+  inserirPi() :void {
+    if (this.numero1 === '0' || !this.numero1)
+      this.resultado = Math.PI.toString();
+    if (this.numero2 == 'null'){
+      let num1 = parseFloat(this.numero1);
+      num1 *= Math.PI
+      this.numero1 = num1.toString();
+    }
+
+    if (this.numero2 !== 'null'){
+      let num2 = parseFloat(this.numero2);
+      num2 *= Math.PI
+      this.numero2 = num2.toString();
+    }
   }
 
   /**

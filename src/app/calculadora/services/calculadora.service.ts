@@ -33,10 +33,15 @@ export class CalculadoraService {
 
     cubo(num1: number): string{
       let resultado: number;
-      resultado = num1*3;
+      resultado = Math.pow(num1,3);
       return resultado.toString();
     }
-    
+
+    inserirPi(num: number):string {
+      let resultado:number;
+      resultado = num * Math.PI
+      return resultado.toString();
+    }
 
     calcular(num1: number, num2: number, operacao:String): number {
       let resultado: number
